@@ -23,7 +23,7 @@
                     <span v-if="movie.generi.length > 1">
                         <span v-for="(genere, index) in movie.generi" :key="'genere' + index">
                             {{genere}}
-                            <span v-if="index < movie.generi.length-1">,</span>
+                            <span v-if="index == movie.generi.length-1">,</span>
                         </span>
                     </span>
                     <span v-else>
@@ -36,7 +36,7 @@
                     <span v-if="movie.lingue.length > 1">
                         <span v-for="(lingua, index) in movie.lingue" :key="'lingua' + index">
                             {{lingua}}
-                            <span v-if="index < movie.lingue.length-1">,</span>
+                            <span v-if="index == movie.lingue.length-1">,</span>
                         </span>
                     </span>
                     <span v-else>

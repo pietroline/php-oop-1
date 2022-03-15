@@ -6,7 +6,7 @@ const app = new Vue({
     },
 
     mounted(){
-        axios.get("http://localhost/php-oop-1/src/server.php")
+        axios.get("http://localhost/php-oop-1/con_axios/src/server.php")
             .then(response => {
                 this.movies = response.data;
                 console.log(this.movies);
