@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Movies</title>
+    </head>
+
+    <body>
+        <div id="app">
+
+            <div v-for="(movie, index) in movies" :key="index" style="margin-bottom: 2rem;">
+
+                <div>
+                    <b>Titolo: </b>
+                    <span>{{movie.titolo}}</span>
+                </div>
+
+                <div>
+                    <b>Generi: </b>
+                    <span v-if="movie.generi.length > 1">
+                        <span v-for="(genere, index) in movie.generi" :key="'genere' + index">
+                            {{genere}}
+                            <span v-if="index < movie.generi.length-1">,</span>
+                        </span>
+                    </span>
+                    <span v-else>
+                        {{movie.generi}}
+                    </span>
+                </div>
+
+                <div>
+                    <b>Lingue: </b>
+                    <span v-if="movie.lingue.length > 1">
+                        <span v-for="(lingua, index) in movie.lingue" :key="'lingua' + index">
+                            {{lingua}}
+                            <span v-if="index < movie.lingue.length-1">,</span>
+                        </span>
+                    </span>
+                    <span v-else>
+                        {{movie.lingua}}
+                    </span>
+                </div>
+
+                <div>
+                    <b>Punteggio: </b>
+                    <span>{{movie.punteggio}}</span>
+                </div>
+            </div>
+            
+        </div>
+
+        <!-- script cdn vue -->
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+        <!-- script cdn ajax -->
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+        <!--script main.js -->
+        <script type="text/javascript" src="js/main.js"></script>
+    </body>
+
+</html>

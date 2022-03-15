@@ -73,26 +73,16 @@
             }
         }
 
-        
-
-       
+     
     }
 
-    $HarryPotter = new movie("Harry Potter", ["Avventure", "Fantasy"], ["Italiano", "Inglese", "Francese", "Tedesco"], 8);
-    echo "<b>Titolo film:</b>" . " " . $HarryPotter->titolo . "<br>";
-    echo "<b>Genere:</b>" . " " . $HarryPotter->getGeneri() . "<br>";
-    echo "<b>Lingue:</b>" . " " . $HarryPotter->getLingue() . "<br>";
-    echo "<b>Punteggio:</b>" . " " . $HarryPotter->punteggio . "<br>";
-
-    echo "<br><br><hr><br><br>";
-
-    $StarWars = new movie("Star Wars", ["Avventure", "Action", "Science Finction"], ["Italiano", "Inglese", "Spagnolo"], 8.5);
-    echo "<b>Titolo film:</b>" . " " . $StarWars->titolo . "<br>";
-    echo "<b>Genere:</b>" . " " . $StarWars->getGeneri() . "<br>";
-    echo "<b>Lingue:</b>" . " " . $StarWars->getLingue() . "<br>";
-    echo "<b>Punteggio:</b>" . " " . $StarWars->punteggio . "<br>";
+    $database = [
+        $HarryPotter = new movie("Harry Potter", ["Avventure", "Fantasy"], ["Italiano", "Inglese", "Francese", "Tedesco"], 8),
+        $StarWars = new movie("Star Wars", ["Avventure", "Action", "Science Finction"], ["Italiano", "Inglese", "Spagnolo"], 8.5),
+    ]
 
 
-   
+
+
+
 ?>
-
