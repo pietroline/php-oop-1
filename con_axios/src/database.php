@@ -2,8 +2,8 @@
 
     class movie{
         public $titolo;
-        public $generi;
-        public $lingue;
+        public $generi = [];
+        public $lingue = [];
         public $punteggio;
 
         public function __construct($title, $genres, $languages, $score){
